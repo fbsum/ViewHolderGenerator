@@ -1,0 +1,39 @@
+<idea-plugin>
+    <id>com.jiajieshen.plugins.viewholdergenerator</id>
+    <name>ViewHolderGenerator</name>
+    <version>1.0.2</version>
+    <vendor email="suausum@gmail.com" url="https://github.com/fbsum">fbsum</vendor>
+
+    <description><![CDATA[
+      Plugin for generating RecyclerView.ViewHolder from selected layout XMLs.
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Release 0.0.1: Initial release.
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="ViewHolderGenerateAction"
+                class="com.jiajieshen.plugins.viewholdergenerator.ViewHolderGenerateAction"
+                text="RecyclerView.ViewHolder"
+                description="Plugin for generating RecyclerView.ViewHolder from selected layout XMLs.">
+            <add-to-group group-id="JavaGenerateGroup1" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>
